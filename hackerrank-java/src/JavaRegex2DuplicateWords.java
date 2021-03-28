@@ -6,7 +6,7 @@ public class JavaRegex2DuplicateWords {
 
     public static void main(String[] args) {
 
-        String regex ="\\b(\\w+)(?:\\W+\\1\\b)+";
+        String regex ="\\\\b(\\\\w+)(\\\\s+\\\\1\\\\b)*";
         Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 
         Scanner in = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class JavaRegex2DuplicateWords {
             
             // Check for subsequences of input that match the compiled pattern
             while (m.find()) {
-                input = input.replaceAll(m.group(), m.group(1));
+                input = input.replaceAll(m.group(0), m.group(1));
             }
             
             // Prints the modified sentence.
