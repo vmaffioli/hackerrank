@@ -1,1 +1,1 @@
-# hackerrank-java
+My hackerrank resolved challenges.
